@@ -19,13 +19,10 @@ connection.once('open', async () => {
     const friends = [];
 
     Users.push({
-
       username,
       email,
       friends,
-
     });
-
   }
 
   await User.collection.insertMany(Users);

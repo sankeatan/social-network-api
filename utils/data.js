@@ -63,21 +63,21 @@ const reactions = [
       'A More Different Political Opinions!'
   
     ]
-    const randomArrItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
+    const randomArrayItem = (array) => array[Math.floor(Math.random() * array.length)];
     
     const randomThought = () => {
       const result = {
-        thoughtText: randomArrItem(thoughts),
-        username: randomArrItem(usernames),
+        thoughtText: randomArrayItem(thoughts),
+        username: randomArrayItem(usernames),
         reactions: {
-          reactionBody: randomArrItem(reactions),
-          username: randomArrItem(usernames),
+          reactionBody: randomArrayItem(reactions),
+          username: randomArrayItem(usernames),
         },
       };
       return result;
     };
     
     const randomName = () =>
-      `${randomArrItem(usernames)}`;
+      `${randomArrayItem(usernames)}`;
     
     module.exports = { randomName, randomThought };
